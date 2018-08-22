@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Simple login</title>
+    <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  </head>
+  <body>
+    <div class="successMessage" *ngIf="successMessage == true">
+          Registration successful
+    </div>
+    <div class="errorMessage" *ngIf="errorMessage == true">
+          Registration failed!
+    </div>
+    <div class="login-page">
+      <div class="form">
+        <h4 class="title">REGISTER NOW</h4>
+        <form class="register-form">
+          <input type="text" name="username" [(ngModel)]="username" placeholder="name" required/>
+          <input type="text" name="email" [(ngModel)]="email" placeholder="email address" required/>
+          <input type="password" name="password" [(ngModel)]="password" placeholder="password" required/>
+          <button (click)="signUp()">create</button>
+          <p class="message">Already registered? <a routerLink='/'>Sign In</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+  
